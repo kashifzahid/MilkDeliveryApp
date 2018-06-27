@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MilkShop"
+    android:layout_rowSpan="10"
+    android:layout_weight="100"
+    tools:layout_editor_absoluteY="25dp">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/top">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dairy"
+            android:textSize="25sp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/holo_blue_dark"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_menu_manage"
+            android:layout_gravity="end|center"
+            android:layout_marginRight="30dp"
+            />
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/header"
+
+        android:layout_marginTop="7dp"
+        android:layout_below="@+id/top"
+
+        app:contentPadding="4dp"
+        app:cardPreventCornerOverlap="true"
+        >
+        <GridLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="1"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="horizontal">
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/milk"
+                    />
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/meat"
+                    android:layout_weight="1"
+                   
+                    />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:paddingTop="10dp"
+
+                    android:paddingBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:src="@drawable/milk"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+
+
+        </GridLayout>
+
+    </android.support.v7.widget.CardView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+
+        android:fillViewport="true"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header"
+        android:id="@+id/scroll">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        >
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/Images"
+        android:layout_alignParentBottom="false"
+
+        app:cardElevation="3dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+
+            android:layout_height="160dp"
+            android:layout_alignParentTop="true"
+            >
+
+        </android.support.v4.view.ViewPager>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabDots"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/viewpager"
+
+
+            android:layout_centerHorizontal="true"
+            app:tabBackground="@drawable/tabselector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp"
+            />
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cat"
+
+        android:layout_below="@+id/Images"
+        android:layout_marginTop="12dp"
+
+        app:cardElevation="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:id="@+id/Category"
+            android:text="Category"
+            android:gravity="center"
+            android:textSize="22dp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginLeft="2dp"
+            />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_below="@+id/Category"
+            android:layout_marginTop="10dp"
+
+
+            android:orientation="horizontal">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+
+
+
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:layout_marginTop="13dp"
+    android:layout_below="@id/cat"
+    app:cardElevation="3dp"
+
+
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Yes "/>
+
+</android.support.v7.widget.CardView>
+
+
+
+</RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+
+        android:layout_height="55dp"
+
+        android:layout_alignParentBottom="true"
+       app:contentPadding="4dp"
+
+
+        >
+
+        <GridLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="1"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="horizontal">
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/milk"
+                    />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/meat"
+                    android:layout_weight="1"
+
+                    />
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:paddingTop="10dp"
+
+                    android:paddingBottom="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:src="@drawable/milk"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+
+
+        </GridLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

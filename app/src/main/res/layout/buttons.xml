@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Check"
+        android:background="#2e5635"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/checkButton" />
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/checkButton"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/linearback"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:id="@+id/linears">
+        <Button
+            android:layout_width="30dp"
+            android:text="-"
+            android:textSize="30sp"
+            android:textColor="@android:color/holo_green_light"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"/>
+        <Button
+            android:layout_width="30dp"
+            android:text="1"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_weight="1"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"/>
+        <Button
+            android:layout_width="30dp"
+            android:text="+"
+            android:textSize="30sp"
+            android:textColor="@android:color/holo_green_light"
+            android:layout_height="wrap_content"
+
+            android:background="@android:color/transparent"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="240dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/linears"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/linearback"
+        android:orientation="horizontal" >
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:background="@android:color/holo_green_light"
+            android:text="Check Out"/>
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:text="455 PKR"
+            android:gravity="center"
+            android:background="@android:color/holo_green_dark"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
