@@ -104,30 +104,121 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkoutCharges">
+
+                 <RelativeLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/subTotal"
+                     >
+                     <view
+                         android:layout_width="match_parent"
+                         android:layout_height="1dp"
+                         android:layout_alignParentTop="true"/>
+                     <android.support.v4.widget.Space
+                         android:layout_width="match_parent"
+                         android:layout_height="6dp"
+                         android:id="@+id/subTotalSpaceTop"/>
 
 
                     <TextView
-                        android:id="@+id/am"
+                        android:id="@+id/subTotalText"
                         android:layout_width="wrap_content"
-                        android:layout_height="50dp"
+                        android:layout_height="wrap_content"
 
-                        android:layout_alignParentTop="true"
-                        android:text="This" />
+                        android:layout_below="@id/subTotalSpaceTop"
 
-                    <View
+                        android:layout_marginLeft="10dp"
+
+                        android:text="SubTotal" />
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_alignParentEnd="true"
+                         android:id="@+id/subTotalRate"
+
+                        android:layout_below="@id/subTotalSpaceTop"
+                         android:layout_marginRight="10dp"
+
+                         android:text="455" />
+                     <android.support.v4.widget.Space
+                         android:layout_width="match_parent"
+                         android:layout_height="6dp"
+                         android:id="@+id/subTotalSpace"
+                         android:layout_below="@id/subTotalText"
+                         android:layout_marginRight="10dp"/>
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:id="@+id/subTotalDelivery"
+                         android:layout_below="@id/subTotalSpace"
+                         android:layout_marginLeft="10dp"
+                         android:text="Delivery Charges"/>
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@id/subTotalSpace"
+                         android:text="Free"
+                         android:layout_alignParentEnd="true"
+                         android:layout_marginRight="10dp"
+                         />
+                     <android.support.v4.widget.Space
+                         android:layout_width="match_parent"
+                         android:layout_height="6dp"
+                         android:id="@+id/subTotalSpaceEnd"
+                         android:layout_below="@id/subTotalDelivery"/>
+                     <view
+                         android:layout_width="match_parent"
+                         android:layout_height="1dp"
+                         android:layout_below="@id/subTotalSpaceEnd"
+
+                         />
+
+
+                 </RelativeLayout>
+
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="@android:color/darker_gray" />
+                        android:layout_height="30dp"
+                        android:layout_below="@id/subTotal"
+                        android:id="@+id/TotalCheckout"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Total"
+                            android:layout_marginLeft="10dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="500"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentEnd="true"
+                            />
+                        <view
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            />
+                    </RelativeLayout>
+
+
 
                     <LinearLayout
                         android:layout_width="330dp"
                         android:layout_height="50dp"
-                        android:layout_below="@id/linears"
+
                         android:id="@+id/checkout"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="50dp"
+
+                        android:layout_below="@id/TotalCheckout"
+
                         android:background="@drawable/linearback"
+                        android:layout_marginTop="4dp"
+                        android:layout_centerHorizontal="true"
                         android:orientation="horizontal">
 
                         <Button
